@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2c3e50</color>
+    <color name="colorPrimaryDark">#1B3147</color>
+    <color name="colorAccent">#3498db</color>
+	<color name="pgdark">#272727</color>
+	<color name="pgsdark">#393939</color>
+	<color name="pgorg">#FFEFD0</color>
+	<color name="white">#E8E8E8</color>
+	<color name="semiwhite">#A7A7A7</color>
+	<color name="pgblue">#292F52</color>
+	<color name="pgred">#501F1F</color>
+	<color name="pgyel">#4C501F</color>
+</resources>

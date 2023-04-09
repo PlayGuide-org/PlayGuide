@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">PlayGuide</string>
+    <string name="action_settings">Settings</string>
+	<string name="welcome">Looking for gaming help? You\'ve come to the right place!</string>
+	<string name="start">Start</string>
+	<string name="exit">Exit</string>
+	<string name="nh">Need Help?</string>
+	<string name="about">About</string>
+	<string name="desc">The ultimate community-driven\, open-source game guide app for expert tips and comprehensive guides.</string>
+	<string name="git">Github</string>
+	<string name="checkrel">Check for new Releases</string>
+	<string name="ver">Version:</string>
+	<string name="cn">Codename:</string>
+	<string name="rab">Report a Bug:</string>
+	<string name="ur">Ursula</string>
+	<string name="undef">Undefined</string>
+	<string name="mlbb">Mobile Legends: Bang Bang</string>
+	<string name="mldesc">
+		multiplayer online battle arena (MOBA) game designed
+		for mobile phones.
+	</string>
+	<string name="cod">Call of Duty Mobile</string>
+	<string name="codesc">free-to-play first-person shooter video game developed 
+by TiMi Studio Group and published by Activision.</string>
+	<string name="ld">Left 4 Dead</string>
+	<string name="ldesc">first-person shooter in which the player takes 
+control of one of four survivors to fight against zombies.</string>
+	<string name="end">Oops, it looks like you\'ve reached the end. More guides are coming soon.</string>
+</resources>

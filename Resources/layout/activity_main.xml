@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:background="@color/pgdark">
+
+
+       <TextView
+           android:id="@+id/textView1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_above="@+id/appCompatButton1"
+           android:layout_marginHorizontal="45dp"
+           android:gravity="left"
+           android:text="@string/welcome"
+           android:textColor="@color/pgorg"
+           android:textSize="35dp" />
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/appCompatButton1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="45dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginBottom="10dp"
+           android:layout_centerInParent="true"
+           android:background="@drawable/btn1"
+           android:text="@string/start"
+           android:textAllCaps="false" />
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/appCompatButton2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="45dp"
+           android:layout_below="@+id/appCompatButton1"
+           android:background="@drawable/btn1"
+           android:text="@string/exit"
+           android:textAllCaps="false" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nh"
+        android:textColor="@color/pgorg"
+        android:layout_marginHorizontal="45dp"
+        android:textSize="15dp"
+        android:id="@+id/nht"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"/>
+
+</RelativeLayout>
