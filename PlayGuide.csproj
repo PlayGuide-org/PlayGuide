@@ -71,8 +71,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.cs" />
+    <Compile Include="Cod.cs" />
     <Compile Include="home.cs" />
+    <Compile Include="Ld.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Mlb.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

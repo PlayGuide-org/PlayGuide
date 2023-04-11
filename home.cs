@@ -32,10 +32,32 @@ namespace PlayGuide
             tx2.SetTypeface(tx2.Typeface, TypefaceStyle.Bold);
             tx3.Typeface = urbanistfont;
 
+            //About Page
             AppCompatButton abt = FindViewById<AppCompatButton>(Resource.Id.about);
             abt.Click += (sender, args) =>
             {
                 Intent intent = new Intent(this, typeof(About));
+                StartActivity(intent);
+            };
+            //Mobile Legends Page
+            AppCompatButton mlb = FindViewById<AppCompatButton>(Resource.Id.appCompatButton3);
+            mlb.Click += (sender, args) =>
+            {
+                Intent intent = new Intent(this, typeof(Mlb));
+                StartActivity(intent);
+            };
+            //Call of duty Mobile Page
+            AppCompatButton cod = FindViewById<AppCompatButton>(Resource.Id.appCompatButton4);
+            cod.Click += (sender, args) =>
+            {
+                Intent intent = new Intent(this, typeof(Cod));
+                StartActivity(intent);
+            };
+            //Left 4 Dead Page
+            AppCompatButton ld = FindViewById<AppCompatButton>(Resource.Id.appCompatButton5);
+            ld.Click += (sender, args) =>
+            {
+                Intent intent = new Intent(this, typeof(Ld));
                 StartActivity(intent);
             };
         }

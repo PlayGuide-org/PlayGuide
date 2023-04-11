@@ -49,6 +49,7 @@
         android:id="@+id/img1"
         android:src="@drawable/ldb"
         android:scaleType="centerCrop"
+        android:layout_above="@+id/rel3"
         android:layout_below="@+id/relativeLayout1"/>
 
     <RelativeLayout
@@ -97,7 +98,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rel2"
-        android:background="@color/pgsdark">
+        android:background="@color/pgsdark"
+        android:id="@+id/rel3">
 
          </RelativeLayout>
      </RelativeLayout>
