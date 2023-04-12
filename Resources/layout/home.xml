@@ -79,7 +79,7 @@
                 android:text="@string/mldesc"
                 android:textColor="@color/white"
                 android:textSize="10dp"
-                android:id="@+id/textView3"/>
+                android:id="@+id/textView8"/>
         
                 </RelativeLayout>
             <androidx.appcompat.widget.AppCompatButton
@@ -88,7 +88,6 @@
             android:layout_height="40dp"
             android:layout_marginHorizontal="3dp"
             android:layout_alignParentEnd="true"
-            android:layout_below="@+id/textView7"
             android:layout_centerInParent="true"
             android:background="@drawable/rightbtn"
             />
@@ -122,16 +121,16 @@
                 android:text="@string/cod"
                 android:textColor="@color/white"
                 android:textSize="17dp"
-                android:id="@+id/textView2"/>
+                android:id="@+id/textView3"/>
             <TextView
                 android:layout_width="225dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_below="@+id/textView2"
+                android:layout_below="@+id/textView3"
                 android:text="@string/codesc"
                 android:textColor="@color/white"
                 android:textSize="10dp"
-                android:id="@+id/textView3"/>
+                android:id="@+id/textView4"/>
         
                 </RelativeLayout>
             <androidx.appcompat.widget.AppCompatButton
@@ -140,7 +139,6 @@
             android:layout_height="40dp"
             android:layout_marginHorizontal="3dp"
             android:layout_alignParentEnd="true"
-            android:layout_below="@+id/textView7"
             android:layout_centerInParent="true"
             android:background="@drawable/rightbtn"
             />
@@ -175,16 +173,16 @@
                 android:text="@string/ld"
                 android:textColor="@color/white"
                 android:textSize="17dp"
-                android:id="@+id/textView2"/>
+                android:id="@+id/textView5"/>
             <TextView
                 android:layout_width="225dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_below="@+id/textView2"
+                android:layout_below="@+id/textView5"
                 android:text="@string/ldesc"
                 android:textColor="@color/white"
                 android:textSize="10dp"
-                android:id="@+id/textView3"/>
+                android:id="@+id/textView6"/>
         
                 </RelativeLayout>
             <androidx.appcompat.widget.AppCompatButton
@@ -213,7 +211,8 @@
                     android:text="@string/end"
                     android:textSize="10dp"
                     android:textAlignment="center"
-                    android:textColor="@color/semiwhite"/>
+                    android:textColor="@color/semiwhite"
+                    android:id="@+id/end"/>
             </RelativeLayout>
         </RelativeLayout>
 

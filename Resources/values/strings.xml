@@ -26,4 +26,6 @@ by TiMi Studio Group and published by Activision.</string>
 	<string name="ldesc">first-person shooter in which the player takes 
 control of one of four survivors to fight against zombies.</string>
 	<string name="end">Oops, it looks like you\'ve reached the end. More guides are coming soon.</string>
+	<string name="guide">Guide</string>
+	<string name="gucodm">Source: </string>
 </resources>
