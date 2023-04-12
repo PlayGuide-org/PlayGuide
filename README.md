@@ -26,7 +26,6 @@ Whether you're looking to master a new game or just need help getting past a tri
 You can use the app to redirect you to the latest Release or your can download it directly here 
 
 Github Release: [PlayGuide - Alpha](https://github.com/PlayGuide-org/PlayGuide/releases/latest)
-> Stable Coming soon, No ETA
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 You have Reached the end! Thank you for taking the time to read this.
