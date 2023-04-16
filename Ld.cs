@@ -52,7 +52,7 @@ namespace PlayGuide
             webView.LoadUrl("https://playguide-org.github.io/PG-Guides/Guides/ld.html");
 
             ProgressBar progressBar = FindViewById<ProgressBar>(Resource.Id.progressBar);
-            webView.SetWebViewClient(new MyWebViewClient(progressBar));
+            webView.SetWebViewClient(new MyWebViewClient(progressBar, tx6));
 
 
             //Return Btn
@@ -66,9 +66,11 @@ namespace PlayGuide
         private class MyWebViewClient : WebViewClient
         {
             private ProgressBar progressBar;
-            public MyWebViewClient(ProgressBar progressBar)
+            private TextView tx6;
+            public MyWebViewClient(ProgressBar progressBar, TextView tx6)
             {
                 this.progressBar = progressBar;
+                this.tx6 = tx6;
             }
             public override void OnPageStarted(WebView view, string url, Bitmap favicon)
             {
@@ -78,6 +80,7 @@ namespace PlayGuide
             public override void OnPageFinished(WebView view, string url)
             {
                 progressBar.Visibility = ViewStates.Gone;
+                tx6.SetText("Left 4 Dead Wiki", TextView.BufferType.Normal);
             }
 
             public override bool ShouldOverrideUrlLoading(WebView view, IWebResourceRequest request)

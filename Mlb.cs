@@ -30,7 +30,6 @@ namespace PlayGuide
             TextView tx3 = FindViewById<TextView>(Resource.Id.textView3);
             TextView tx4 = FindViewById<TextView>(Resource.Id.guide);
             TextView tx5 = FindViewById<TextView>(Resource.Id.src);
-            TextView tx6 = FindViewById<TextView>(Resource.Id.datsrc);
             //App Title
             tx1.Typeface = urbanistfont;
             tx1.SetTypeface(tx1.Typeface, TypefaceStyle.Bold);
@@ -44,15 +43,17 @@ namespace PlayGuide
             tx4.SetTypeface(tx4.Typeface, TypefaceStyle.Bold);
             //Source
             tx5.Typeface = urbanistfont;
-            tx6.Typeface = urbanistfont;
-            tx6.SetTypeface(tx6.Typeface, TypefaceStyle.Bold);
 
             WebView webView = FindViewById<WebView>(Resource.Id.webView);
             webView.Settings.JavaScriptEnabled = true;
             webView.LoadUrl("https://playguide-org.github.io/PG-Guides/Guides/mlbb.html");
 
             ProgressBar progressBar = FindViewById<ProgressBar>(Resource.Id.progressBar);
-            webView.SetWebViewClient(new MyWebViewClient(progressBar));
+            TextView tx6 = FindViewById<TextView>(Resource.Id.datsrc);
+            tx6.Typeface = urbanistfont;
+            tx6.SetTypeface(tx6.Typeface, TypefaceStyle.Bold);
+            webView.SetWebViewClient(new MyWebViewClient(progressBar, tx6));
+
 
             //Return Btn
             AppCompatButton ret = FindViewById<AppCompatButton>(Resource.Id.btn);
@@ -65,9 +66,11 @@ namespace PlayGuide
         private class MyWebViewClient : WebViewClient
         {
             private ProgressBar progressBar;
-            public MyWebViewClient(ProgressBar progressBar)
+            private TextView tx6;
+            public MyWebViewClient(ProgressBar progressBar, TextView tx6)
             {
                 this.progressBar = progressBar;
+                this.tx6 = tx6;
             }
             public override void OnPageStarted(WebView view, string url, Bitmap favicon)
             {
@@ -77,6 +80,7 @@ namespace PlayGuide
             public override void OnPageFinished(WebView view, string url)
             {
                 progressBar.Visibility = ViewStates.Gone;
+                tx6.SetText("Dot Esports", TextView.BufferType.Normal);
             }
 
             public override bool ShouldOverrideUrlLoading(WebView view, IWebResourceRequest request)

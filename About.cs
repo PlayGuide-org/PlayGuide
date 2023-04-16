@@ -142,11 +142,12 @@ namespace PlayGuide
                     {
                         var currentVersion = PackageManager.GetPackageInfo(PackageName, 0).VersionName;
                         var latestVersion = latestRelease.Value<string>("tag_name").TrimStart('v');
+                        var releaseNotes = latestRelease.Value<string>("body");
 
                         if (currentVersion != latestVersion)
                         {
                             var releasesUrl = latestRelease.Value<string>("html_url");
-                            ShowUpdatePopup(releasesUrl);
+                            ShowUpdatePopup(latestVersion, releaseNotes, releasesUrl);
                         }
                         else
                         {
@@ -162,17 +163,18 @@ namespace PlayGuide
                 {
                     ActivityCompat.RequestPermissions(this, new[] { Manifest.Permission.WriteExternalStorage }, RequestCodeStoragePermission);
                 }
-            }catch (Exception ex){
+            }
+            catch (Exception ex)
+            {
                 Toast.MakeText(this, $"Error Checking updates: {ex.Message}", ToastLength.Long).Show();
             }
         }
-         
 
-
-        private void ShowUpdatePopup(string releasesUrl)
+        private void ShowUpdatePopup(string latestVersion, string releaseNotes, string releasesUrl)
         {
             var builder = new AlertDialog.Builder(this);
-            builder.SetMessage("A new update is available");
+            builder.SetTitle("Update Available");
+            builder.SetMessage($"A new version ({latestVersion}) is available.\n\nRelease Notes:\n{releaseNotes}");
             builder.SetPositiveButton("Download", (s, e) =>
             {
                 var intent = new Intent(Intent.ActionView, Android.Net.Uri.Parse(releasesUrl));
@@ -183,7 +185,7 @@ namespace PlayGuide
             dialog.Show();
         }
 
-            public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
@@ -200,6 +202,7 @@ namespace PlayGuide
                 }
             }
         }
+
     }
 }
             

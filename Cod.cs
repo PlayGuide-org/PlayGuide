@@ -52,7 +52,7 @@ namespace PlayGuide
             webView.LoadUrl("https://playguide-org.github.io/PG-Guides/Guides/codm.html");
 
             ProgressBar progressBar = FindViewById<ProgressBar>(Resource.Id.progressBar);
-            webView.SetWebViewClient(new MyWebViewClient(progressBar));
+            webView.SetWebViewClient(new MyWebViewClient(progressBar, tx6));
 
             //Return Btn
             AppCompatButton ret = FindViewById<AppCompatButton>(Resource.Id.btn);
@@ -65,13 +65,16 @@ namespace PlayGuide
         private class MyWebViewClient : WebViewClient
         {
             private ProgressBar progressBar;
-            public MyWebViewClient(ProgressBar progressBar)
+            private TextView tx6;
+            public MyWebViewClient(ProgressBar progressBar, TextView tx6)
             {
                 this.progressBar = progressBar;
+                this.tx6 = tx6;
             }
             public override void OnPageStarted(WebView view, string url, Bitmap favicon)
             {
                 progressBar.Visibility = ViewStates.Visible;
+                tx6.SetText("Pocket-lint", TextView.BufferType.Normal);
             }
 
             public override void OnPageFinished(WebView view, string url)
