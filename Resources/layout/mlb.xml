@@ -134,6 +134,22 @@
                         android:id="@+id/datsrc"
                         android:textColor="@color/white"
                         android:layout_alignParentEnd="true"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/web"
+                        android:layout_below="@+id/datsrc"
+                        android:layout_marginTop="10dp">
+                                <WebView
+                                  android:id="@+id/webView"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content" />
+                                 <ProgressBar
+                                    android:id="@+id/progressBar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true" />
+                        </RelativeLayout>
                 </RelativeLayout>
 
          </RelativeLayout>

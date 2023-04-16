@@ -4,6 +4,7 @@ using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using Android.Webkit;
 using Android.Widget;
 using AndroidX.AppCompat.Widget;
 using System;
@@ -46,6 +47,13 @@ namespace PlayGuide
             tx6.Typeface = urbanistfont;
             tx6.SetTypeface(tx6.Typeface, TypefaceStyle.Bold);
 
+            WebView webView = FindViewById<WebView>(Resource.Id.webView);
+            webView.Settings.JavaScriptEnabled = true;
+            webView.LoadUrl("https://playguide-org.github.io/PG-Guides/Guides/mlbb.html");
+
+            ProgressBar progressBar = FindViewById<ProgressBar>(Resource.Id.progressBar);
+            webView.SetWebViewClient(new MyWebViewClient(progressBar));
+
             //Return Btn
             AppCompatButton ret = FindViewById<AppCompatButton>(Resource.Id.btn);
             ret.Click += (sender, args) =>
@@ -53,6 +61,29 @@ namespace PlayGuide
                 Intent intent = new Intent(this, typeof(home));
                 StartActivity(intent);
             };
+        }
+        private class MyWebViewClient : WebViewClient
+        {
+            private ProgressBar progressBar;
+            public MyWebViewClient(ProgressBar progressBar)
+            {
+                this.progressBar = progressBar;
+            }
+            public override void OnPageStarted(WebView view, string url, Bitmap favicon)
+            {
+                progressBar.Visibility = ViewStates.Visible;
+            }
+
+            public override void OnPageFinished(WebView view, string url)
+            {
+                progressBar.Visibility = ViewStates.Gone;
+            }
+
+            public override bool ShouldOverrideUrlLoading(WebView view, IWebResourceRequest request)
+            {
+                // Handle external links differently if needed
+                return base.ShouldOverrideUrlLoading(view, request);
+            }
         }
     }
 }
