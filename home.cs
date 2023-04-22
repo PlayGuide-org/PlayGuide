@@ -69,6 +69,12 @@ namespace PlayGuide
                 Intent intent = new Intent(this, typeof(Mlb));
                 StartActivity(intent);
             };
+            RelativeLayout rml = FindViewById<RelativeLayout>(Resource.Id.rml);
+            rml.Click += (sender, args) =>
+            {
+                Intent intent = new Intent(this, typeof(Mlb));
+                StartActivity(intent);
+            };
             //Call of duty Mobile Page
             AppCompatButton cod = FindViewById<AppCompatButton>(Resource.Id.appCompatButton4);
             cod.Click += (sender, args) =>
@@ -76,11 +82,23 @@ namespace PlayGuide
                 Intent intent = new Intent(this, typeof(Cod));
                 StartActivity(intent);
             };
+            RelativeLayout rcod = FindViewById<RelativeLayout>(Resource.Id.rcod);
+            rcod.Click += (sender, args) =>
+            {
+                Intent intent = new Intent(this, typeof(Mlb));
+                StartActivity(intent);
+            };
             //Left 4 Dead Page
             AppCompatButton ld = FindViewById<AppCompatButton>(Resource.Id.appCompatButton5);
             ld.Click += (sender, args) =>
             {
                 Intent intent = new Intent(this, typeof(Ld));
+                StartActivity(intent);
+            };
+            RelativeLayout rld = FindViewById<RelativeLayout>(Resource.Id.rld);
+            rld.Click += (sender, args) =>
+            {
+                Intent intent = new Intent(this, typeof(Mlb));
                 StartActivity(intent);
             };
         }

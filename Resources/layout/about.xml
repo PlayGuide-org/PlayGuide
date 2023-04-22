@@ -31,14 +31,25 @@
             android:layout_centerInParent="true"
             android:id="@+id/textView1"/>
          </RelativeLayout>
-
-    <ImageView
-        android:layout_below="@+id/relativeLayout1"
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/scroll1"
+    android:layout_below="@id/relativeLayout1"
+     android:fillViewport="true">
+<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/img1"
-        android:src="@drawable/wp"
-        android:scaleType="centerCrop" />
+        android:background="@drawable/rect"
+        android:id="@+id/relativeLayout2">
+            <ImageView
+                android:layout_below="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/img1"
+                android:src="@drawable/wp"
+                android:scaleType="centerCrop"
+                android:layout_above="@+id/cont"/>
 
      <RelativeLayout
          android:layout_width="match_parent"
@@ -86,7 +97,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rel2"
-        android:background="@color/pgsdark">
+        android:background="@color/pgsdark"
+        android:id="@+id/cont"
+        >
 
    
         <TextView
@@ -155,6 +168,15 @@
             android:layout_below="@+id/textView7"
             android:background="@drawable/rightbtn"
             />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/appCompatButton3"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="bottom"
+            >
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/appCompatButton1"
             android:layout_width="match_parent"
@@ -162,7 +184,6 @@
             android:layout_marginHorizontal="45dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
-            android:layout_above="@id/appCompatButton2"
             android:background="@drawable/btn1"
             android:text="@string/git"
             android:textAllCaps="false" />
@@ -171,10 +192,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="45dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/btn1"
             android:text="@string/checkrel"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/appCompatButton1"     
             android:textAllCaps="false" />
+        </RelativeLayout>
     </RelativeLayout>
+  </RelativeLayout>
+</ScrollView>
 </RelativeLayout>
