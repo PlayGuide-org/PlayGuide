@@ -85,7 +85,7 @@ namespace PlayGuide
             RelativeLayout rcod = FindViewById<RelativeLayout>(Resource.Id.rcod);
             rcod.Click += (sender, args) =>
             {
-                Intent intent = new Intent(this, typeof(Mlb));
+                Intent intent = new Intent(this, typeof(Cod));
                 StartActivity(intent);
             };
             //Left 4 Dead Page
@@ -98,7 +98,7 @@ namespace PlayGuide
             RelativeLayout rld = FindViewById<RelativeLayout>(Resource.Id.rld);
             rld.Click += (sender, args) =>
             {
-                Intent intent = new Intent(this, typeof(Mlb));
+                Intent intent = new Intent(this, typeof(Ld));
                 StartActivity(intent);
             };
         }
